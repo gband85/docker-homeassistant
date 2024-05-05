@@ -80,6 +80,8 @@ RUN \
     socat \
     tiff \
     xz && \
+  groupadd -g 1099 hass && \
+  usermod -aG hass abc && \
   echo "**** Retrieve versions ****" && \
   mkdir -p \
     /tmp/core && \
